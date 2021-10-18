@@ -6,7 +6,9 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 
+// 路由引入
 const index = require('./routes/index')
+const category = require('./routes/category')
 const users = require('./routes/users')
 
 // error handler
@@ -34,11 +36,12 @@ app.use(async (ctx, next) => {
 
 // routes
 app.use(index.routes(), index.allowedMethods())
+app.use(category.routes(), category.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
-
 module.exports = app
+//
