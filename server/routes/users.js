@@ -30,7 +30,6 @@ router.prefix("/users")
  *
  *
  */
-function 注册用户() { return; }
 router.get("/register", register)
 
 module.exports = router
