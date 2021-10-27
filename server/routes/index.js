@@ -67,7 +67,7 @@ router.get("/gridlist", async (ctx) => {
   };
 });
 // 鞋子数据
-router.get("/gridlist", async (ctx) => {
+router.get("/sports", async (ctx) => {
   ctx.body = {
     status: 200,
     data: [
